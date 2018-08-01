@@ -7,6 +7,7 @@ def test_login(driver):
     PAGE_HEADER = (By.CSS_SELECTOR, 'nav[class="hui-webnav__grid-col--onewhole hui-globalnav"]')
 
     page_header = self.find(PAGE_HEADER)
+    # Here I assumed I will be able to extract data from existing test data
     username = test_user.username
     password = test_user.password
 

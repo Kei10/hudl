@@ -1,7 +1,7 @@
 from selenium.webdriver.common import By
 
 class LoginPage(HudlHomePage):
-
+    # Methods unique to this page lives here
     def type_username(self,username):
         USERNAME_FIELD = (By.CSS_SELECTOR, 'input[name="username"]')
 

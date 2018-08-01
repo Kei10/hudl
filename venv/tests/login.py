@@ -1,11 +1,12 @@
 from selenium.webdriver.common.by import By
 
 def test_login(driver):
+    # Initiate a browser object that has all browser related methods in it
     driver = HudlHomepage
 
-    PAGE_BODY = (By.CSS_SELECTOR, 'body[class="mobile-first"]')
+    PAGE_HEADER = (By.CSS_SELECTOR, 'nav[class="hui-webnav__grid-col--onewhole hui-globalnav"]')
 
-    page_body = self.find(PAGE_BODY)
+    page_header = self.find(PAGE_HEADER)
     username = test_user.username
     password = test_user.password
 
@@ -15,5 +16,5 @@ def test_login(driver):
         .type_password(password=password)\
         .submit_login()
 
-    assert page_body is not None
+    assert page_header.is_displayed()
 
